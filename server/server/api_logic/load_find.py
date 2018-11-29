@@ -3,7 +3,7 @@ from .pandas_variant import *
 
 def getList():
 	data, gene = read_data()
-	print(gene)
+	# print(gene)
 	return gene
 
 def searchGene(gene):

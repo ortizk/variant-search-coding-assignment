@@ -5,5 +5,5 @@ from . import views
 urlpatterns = [
 	path('list', views.geneList),
 	path('search', views.searchGene)
-	path('find/:id', views.findOne)
+	# path('find/:id', views.findOne)
 ]

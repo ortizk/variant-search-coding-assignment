@@ -6,4 +6,5 @@ def read_data():
 	for g in data.Gene.values:
 		if str(g) != "nan":
 			genes.append(g)
+	genes = list(set(genes))
 	return data, genes
