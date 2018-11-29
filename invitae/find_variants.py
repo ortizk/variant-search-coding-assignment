@@ -1,6 +1,5 @@
 from pandas_variants import *
 
-# DELETE
 data = read_data()
 
 def find_gene(gene, data):
@@ -10,5 +9,3 @@ def find_gene(gene, data):
 			results.append(d[0])
 	print(results)
 
-# DELETE
-find_gene("braf", data)
