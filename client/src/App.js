@@ -1,25 +1,37 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+// import axios from 'axios';
 import './App.css';
+import Search from './Search';
+// import { SERVER_URL } from './constants';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      genes: null
+    }
+  }
+
+  // componentDidMount = () => {
+  //   this.getGenes();
+  // }
+
+  // getGenes = () => {
+  //   axios.post(SERVER_URL + '/list', {
+  //       headers: { 
+  //         'GeneList': `List of possible ${genes}`
+  //       },
+  //     })
+  // }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Router>
+          <div>
+            <Route exact path="/" component={Search} />
+          </div>
+        </Router>
       </div>
     );
   }
