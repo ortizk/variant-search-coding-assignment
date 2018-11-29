@@ -31,13 +31,16 @@
   }
 }
 
-/*html {
+body {
   background: url('https://images.pexels.com/photos/572688/pexels-photo-572688.jpeg?cs=srgb&dl=conifer-daylight-environment-572688.jpg&fm=jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}*/
+  color: white;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 300;
+}
 
 .btn {
   background-color: #11ada0;
@@ -57,20 +60,6 @@
   margin-top: 23px;
 }
 
-.geneInput {
-  height: 40px;
-  width: 60%;
-  border: 1px solid white;
-  background-color: transparent;
-}
-
-.geneInput::placeholder {
-  color: white;
-  font-size: 20px;
-  letter-spacing: 1px;
-
-}
-
 form {
   background: rgba(225, 225, 225, .8);
   height: 100px;
@@ -78,14 +67,7 @@ form {
   border-radius: 15px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 200px;
-}
-
-input, textarea {
-  height: 40px;
-  width: 60%;
-  border: 1px solid white;
-  background-color: transparent;
+  /*margin-top: 200px;*/
 }
 
 .item {
@@ -101,13 +83,38 @@ input, textarea {
 .menu {
   position: absolute;
   box-sizing: border-box;
-  /*width: 100%;*/
   border: 1px solid #cccccc;
-  /*background-color: grey;*/
+}
+
+.title {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: white;
+  font-weight: 400;
+  margin-top: 180px;
+  font-size: 60px;
 }
 
 
+/*-----------------*/
 
+/*.auto textarea {
+  height: 400px;
+}*/
+
+/*not working*/
+/*input textarea {
+  height: 400px;
+  width: 60%;
+  border: 1px solid white;
+  background-color: transparent;
+}*/
+
+/*.geneInput {
+  height: 100px;
+  width: 60%;
+  border: 1px solid white;
+  background-color: transparent;
+}*/
 
 
 

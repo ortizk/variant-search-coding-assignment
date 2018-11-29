@@ -13,7 +13,7 @@ class Search extends Component {
 		this.state = {
 			gene: '',
 			variants: null,
-			value: '' 
+			// value: '' 
 		}
 	}
 
@@ -37,17 +37,18 @@ class Search extends Component {
 
 	render() {
 		return(
-			<div>
-				<h1>Search Genes</h1>
+			<div className="search">
+				<h1 className="title">Search Genes</h1>
 				<form>
 					<Autocomplete
 						value={ this.state.value }
+						inputProps={{ id: 'states-autocomplete' }}
+          				wrapperStyle={{ position: 'relative', display: 'inline-block'}}
 						items={ getGenes() }
 						getItemValue={ item => item }
 						shouldItemRender={ matchGene }
 						onChange={(event, value) => this.setState({ value }) }
 						onSelect={ value => this.setState({ value }) }
-						className="geneInput"
 						renderMenu={ children => (
 	            			<div className = "menu">
 	              				{ children }
@@ -61,6 +62,7 @@ class Search extends Component {
 							</div>
 						)}
 					/>
+				
 				<input type="submit" value="submit" className='btn' />
 				</form>
 			</div>
