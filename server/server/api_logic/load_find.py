@@ -1,9 +1,12 @@
-from find_variants import *
-from pandas_variants import *
+from . import find_variants
+from .pandas_variant import *
 
+def getList():
+	data, gene = read_data()
+	print(gene)
+	return gene
 
-data, gene = read_data()
-geneFind = "BRAF"
+def searchGene(gene):
+	goodData = find_gene(geneFind, data)
+	return goodData
 
-goodData = find_gene(geneFind, data)
-print(goodData)
