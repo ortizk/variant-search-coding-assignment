@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { SERVER_URL } from './constants';
 import Autocomplete from  'react-autocomplete';
@@ -11,7 +10,7 @@ class Search extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			gene: '',
+			// gene: '',
 			variants: null,
 			// value: '' 
 		}
@@ -23,7 +22,8 @@ class Search extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		axios.post(SERVER_URL + '/search', {gene: this.state.gene})
+		console.log(this.state.value)
+		axios.get(SERVER_URL + '/list', {gene: this.state.value})
 		.then(res => {
 			console.log('result data from genes', res.data);
 			this.setState({
@@ -37,9 +37,9 @@ class Search extends Component {
 
 	render() {
 		return(
-			<div className="search">
+			<div>
 				<h1 className="title">Search Genes</h1>
-				<form>
+				<form onSubmit={this.handleSubmit}>
 					<Autocomplete
 						value={ this.state.value }
 						inputProps={{ id: 'states-autocomplete' }}
@@ -57,7 +57,7 @@ class Search extends Component {
 						renderItem={ (item, isHighlighted) => (
 							<div
 							  className={`item ${isHighlighted ? 'item-highlighted' : ''}`}
-							  key={ item.abbr } >
+							  key={ item } >
 							  { item }
 							</div>
 						)}
