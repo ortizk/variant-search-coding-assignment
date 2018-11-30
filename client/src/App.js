@@ -20,8 +20,9 @@ class App extends Component {
   getGenes = () => {
     axios.get(SERVER_URL + '/list')
       .then(response => {
+        console.log(response)
         this.setState({
-          genes: response.data.genes
+          genes: JSON.parse(response.data.genes)
         });        
       })
       .catch(err => {
@@ -36,7 +37,9 @@ class App extends Component {
       <div className="App">
         <Router>
           <div>
-            <Route exact path="/" component={Search} />
+            <Route exact path="/" component={
+              () => (<Search geneList={this.state.genes} />)
+            } />
           </div>
         </Router>
       </div>

@@ -1,12 +1,17 @@
 from django.shortcuts import get_object_or_404, render, redirect
-from django.http import HttpResponse, HttpResponseRedirect
+from django.template import Context, RequestContext
+from django.http import HttpResponse, HttpResponseRedirect,JsonResponse
 from .api_logic import load_find
+import json
+
 
 def geneList(request):
-	thing = load_find.getList()
-	return HttpResponse(thing)
+	genes = load_find.getList()
+	return JsonResponse({"genes":json.dumps(genes)})
 
 def searchGene(request):
 	# TODO - GET WILDCARD ROUTE
-	thing = load_find.searchGene(gene)
-	return HttpResponse(200)
+	variants = load_find.searchGene(request.GET.get("gene"))
+	test = str(variants)
+	print(type(test))
+	return JsonResponse({"variants":test}, safe=False)

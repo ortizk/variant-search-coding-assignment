@@ -3,6 +3,7 @@ import axios from 'axios';
 import { SERVER_URL } from './constants';
 import Autocomplete from  'react-autocomplete';
 import { getGenes, matchGene } from './data';
+import querystring from 'querystring';
 
 
 	
@@ -10,7 +11,6 @@ class Search extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			// gene: '',
 			variants: null,
 			// value: '' 
 		}
@@ -22,12 +22,13 @@ class Search extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(this.state.value)
-		axios.get(SERVER_URL + '/list', {gene: this.state.value})
+		axios.get(SERVER_URL + '/search?' + querystring.stringify({gene: this.state.value}))
 		.then(res => {
 			console.log('result data from genes', res.data);
+			console.log(JSON.parse(res.data.variants))
+			var test = res.data.variants
 			this.setState({
-				variants: res.data
+				variants: test
 			})
 		})
 		.catch(err => {
@@ -36,6 +37,7 @@ class Search extends Component {
 	}
 
 	render() {
+		const genes = this.props.geneList || []
 		return(
 			<div>
 				<h1 className="title">Search Genes</h1>
@@ -44,7 +46,7 @@ class Search extends Component {
 						value={ this.state.value }
 						inputProps={{ id: 'states-autocomplete' }}
           				wrapperStyle={{ position: 'relative', display: 'inline-block'}}
-						items={ getGenes() }
+						items={ genes }
 						getItemValue={ item => item }
 						shouldItemRender={ matchGene }
 						onChange={(event, value) => this.setState({ value }) }

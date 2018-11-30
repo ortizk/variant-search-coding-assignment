@@ -1,4 +1,4 @@
-from . import find_variants
+from .find_variants import *
 from .pandas_variant import *
 
 def getList():
@@ -6,7 +6,9 @@ def getList():
 	# print(gene)
 	return gene
 
-def searchGene(gene):
+def searchGene(geneFind):
+	data, gene = read_data()
 	goodData = find_gene(geneFind, data)
+	print(type(goodData))
 	return goodData
 
