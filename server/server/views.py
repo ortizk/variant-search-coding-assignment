@@ -10,8 +10,5 @@ def geneList(request):
 	return JsonResponse({"genes":json.dumps(genes)})
 
 def searchGene(request):
-	# TODO - GET WILDCARD ROUTE
 	variants = load_find.searchGene(request.GET.get("gene"))
-	test = str(variants)
-	print(type(test))
-	return JsonResponse({"variants":test}, safe=False)
+	return JsonResponse({"variants":json.dumps(variants)})

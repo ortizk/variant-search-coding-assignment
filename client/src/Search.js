@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { SERVER_URL } from './constants';
 import Autocomplete from  'react-autocomplete';
-import { getGenes, matchGene } from './data';
+import { matchGene } from './data';
 import querystring from 'querystring';
 
 

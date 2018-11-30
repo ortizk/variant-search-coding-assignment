@@ -9,8 +9,5 @@ def read_data():
 	genes = list(set(genes))
 	return data, genes
 
-def search_gene(gene):
-	data = pd.read_csv("/Users/karla/afterClass/variant-search-coding-assignment/server/server/api_logic/variants.tsv", sep='\t')
-	
 
-	return True
+
