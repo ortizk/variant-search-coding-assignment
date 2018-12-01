@@ -32,7 +32,8 @@ Create a web application that allows a user to search for genomic variants by ge
 6. Set up routes
 7. Created components on the frontend and set up Axios requests
 8. Connected frontend and backend
-9. Styled app
+9. Implemented Autocomplete
+10. Styled app
 
 
 ## Testing
