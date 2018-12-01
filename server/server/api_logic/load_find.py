@@ -9,6 +9,5 @@ def getList():
 def searchGene(geneFind):
 	data, gene = read_data()
 	goodData = find_gene(geneFind, data)
-	print(type(goodData))
 	return goodData
 

@@ -13,6 +13,7 @@ class Search extends Component {
 		super(props);
 		this.state = {
 			variants: null
+			// count: null
 		}
 	}
 

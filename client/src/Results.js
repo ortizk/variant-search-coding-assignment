@@ -8,13 +8,16 @@ class Results extends Component {
   	}
   
 	render() {
-    const variants = this.props.variantsList;
-	    if(variants !== null){
-	    	return (
-	      		<div>
-	        		<h1>this</h1>
-	      		</div>
-	    	);
+		console.log(this.props.variantsList)
+	    const variants = this.props.variantsList;
+	    if(variants != null){
+	    	for(let i=0;i <= 3;i++){
+	    		return (
+	      			<div>
+	        			<h1>{variants.length}</h1>
+	      			</div>
+	    		);
+	    	}	
 	    }
 	    return null
     
