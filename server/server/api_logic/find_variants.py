@@ -1,18 +1,12 @@
 def find_gene(gene, data):
-	variants = {}
+	variants = []
 	for v in data._get_values:
+		current = []
 		v = v.tolist()
 		if v[0] == gene:
-			variants = {
-				"gene" : v[0],
-				"nucleotide_change" : v[1],
-				"protien_change" : v[2],
-				"alias" : v[4],
-				"region" : v[6],
-				"reported_classification" : v[7],
-				"last_evaluation": v[10],
-				"last_updated": v[11],
-				"url": v[12]
-			}
+			current.extend((v[0], str(v[1]), str(v[2]), str(v[4]), str(v[6]), v[7], str(v[10]), v[11], v[12] ))
+			variants.append(current)
+			current = []
+			print(variants)
 	return variants
 

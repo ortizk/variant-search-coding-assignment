@@ -4,6 +4,7 @@ import axios from 'axios';
 import './App.css';
 import Search from './Search';
 import { SERVER_URL } from './constants';
+// import Results from './Results';
 
 class App extends Component {
   constructor(props){
@@ -19,20 +20,20 @@ class App extends Component {
 
   getGenes = () => {
     axios.get(SERVER_URL + '/list')
-      .then(response => {
-        console.log(response)
+      .then(res => {
+        console.log(res)
         this.setState({
-          genes: JSON.parse(response.data.genes)
+          genes: JSON.parse(res.data.genes)
         });        
       })
       .catch(err => {
         console.log('ERROR', err);
-        console.log('response', err.response);
+        console.log('response', err.res);
       });
-    // console.log(this.state.genes[0])
   }
   
   render() {
+    console.log(typeof this.state.genes)
     return (
       <div className="App">
         <Router>
@@ -40,6 +41,7 @@ class App extends Component {
             <Route exact path="/" component={
               () => (<Search geneList={this.state.genes} />)
             } />
+      
           </div>
         </Router>
       </div>
