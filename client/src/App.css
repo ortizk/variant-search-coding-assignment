@@ -86,6 +86,13 @@ form {
   border: 1px solid #cccccc;
 }
 
+.table {
+  background: rgba(225, 225, 225, .8);
+  border-radius: 15px;
+  color: black;
+  font-weight: 280;
+}
+
 .title {
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: white;

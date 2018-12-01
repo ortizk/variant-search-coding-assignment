@@ -10,14 +10,14 @@ class Results extends Component {
 	render() {
 		console.log(this.props.variantsList)
 	    const variants = this.props.variantsList;
+	    // console.log(variants.length)
 	    if(variants != null){
-	    	for(let i=0;i <= 3;i++){
 	    		return (
 	      			<div>
-	        			<h1>{variants.length}</h1>
+	        			<p className='table'>{variants}</p>
 	      			</div>
-	    		);
-	    	}	
+	    		);	
+	    		
 	    }
 	    return null
     

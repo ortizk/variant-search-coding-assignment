@@ -1,39 +1,73 @@
-# Variant Search Coding Assignment
+# Invitae Variant Search
 
-## Assignment
+## Objective
 
 Create a web application that allows a user to search for genomic variants by gene name and display the results in a tabular view.
+**NOTE: this is not at MVP. Please see Road Blocks below.**
 
 ## Features
 
-1. Allow the user to enter a gene name to search for variants in that gene. Display the results in a table that shows various attributes associated with each genomic variant.
+1.  Allows the user to enter a gene name to search for variants in that gene. Displays the results that shows various attributes associated with each genomic variant.
+    
+2.  Provides an auto-suggest feature for entering the gene name.
+    
+3.  Provides two RESTful endpoints supporting the functionality listed in no. 1 and 2.
 
-2. Provide an auto-suggest feature for entering the gene name.
+## Installing and Running
 
-3. Provide two RESTful endpoints supporting the functionality listed in steps 1 and 2.
+1.  Clone this repository `git clone git@github.com:ortizk/variant-search-coding-assignment.git`
+    
+2.  Install dependencies `npm install`
+    
+3.  cd client `npm start` then cd into (2nd)server `python3 manage.py runserver`
 
-## Datasource
 
-A zipped TSV file of variants is available in /data/variants.tsv.zip. Each row in the TSV file represents a genomic variant and contains a Gene column with the gene name. A variant will belong to one and only one gene, but multiple variants may belong to the same gene.
+## Development Process
 
-## Implementation
+1. Planned, scheduled and researched
+2. Created basic api logic 
+3. Used Pandas to access data in tsv file
+4. Set up backend and frontend environments
+5. Integrated api logic
+6. Set up routes
+7. Created components on the frontend and set up Axios requests
+8. Connected frontend and backend
+9. Styled app
 
-If you are comfortable with Python and/or React, please use these technologies for your app. You may use any additional frameworks, languages, databases, libraries, etc. that you find appropriate.
 
-Our expectation is you will be writing some server code, client code, and applying some basic styling to create a working web application. The application should include unit tests.
+## Testing
 
-Here’s an example of how you might group and display the information:
+You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
 
-![variants table example](./example_table.png)
 
-## Submitting Your Solution
+## Routes
 
-Please clone this repository and upload an archive to Greenhouse, or upload your repository to GitHub and send us a link. Update this README to include instructions on how to install, test, and run your application. Bonus: Deploy it and include the URL here.
+|METHOD                |PATH                        |DESCRIPTION                         |
+|----------------|-------------------------------|-----------------------------|
+|GET|/genes	            |gets a list of all possible genes for auto-complete           |
+|GET         |/search?:id          |provides a list of variants associated with specified gene            |
+|
+## Road Blocks and (some) Solutions
 
-As part of the review process, we may comment on or ask questions about specific parts of the code.
+1.  Originally thought to seed a database with tsv data but instead used Pandas.
+2. Pandas Dataframe data not being converted to JSON so converted data into more compatible format. In the end, however, this was still my downfall as React was still not able to read the data as props accurately. I believe that when the data was on the frontend, it was still somehow a DataFrame object making me unable to use the data. 
 
-Please return your solution within 1 week. This is not an expectation of the time required to complete the assignment. Rather, it’s meant to provide buffer for busy schedules.
+## Take Aways
 
-## Questions
+1.  I have never worked with a .tsv file. That was interesting.
+2. I am going to research more about Pandas Dataframe.
+3. It was really interesting to have a Python backend with a React frontend. Being able to go between both languages was kind of fun.
+4. Even though I didn't hit MVP, I learned a lot on this project and I still plan to work on it until it is complete.
 
-Please ask if any part of the assignment is unclear. Communicate with us as you would with your project team at work.
+
+## Technologies Used
+
+1.  React.JS
+4. Django
+5. Python
+6. Pandas
+7. .tsv
+8. Git
+9. GitHub
+10. PyCharm
+11. Sublime
