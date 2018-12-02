@@ -1,0 +1,29 @@
+test_name: ENDPOINT TEST
+
+stages:
+  - name: GET GENE LIST
+
+    request:
+      url: http://127.0.0.1:8000/list
+      method: GET
+
+    response:
+      status_code: 200
+
+  - name: GET VARIANTS
+
+    request:
+      url: http://127.0.0.1:8000/search?gene=BRAF
+      method: GET
+
+    response:
+      status_code: 200
+  
+
+
+
+
+
+
+
+
