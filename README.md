@@ -3,7 +3,6 @@
 ## Objective
 
 Create a web application that allows a user to search for genomic variants by gene name and display the results in a tabular view.
-**NOTE: this is not at MVP. Please see Road Blocks below.**
 
 ## Features
 
@@ -32,13 +31,7 @@ Create a web application that allows a user to search for genomic variants by ge
 6. Set up routes
 7. Created components on the frontend and set up Axios requests
 8. Connected frontend and backend
-9. Implemented Autocomplete
-10. Styled app
-
-
-## Testing
-
-You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
+9. Styled app
 
 
 ## Routes
@@ -47,28 +40,15 @@ You can rename the current file by clicking the file name in the navigation bar 
 |----------------|-------------------------------|-----------------------------|
 |GET|/genes	            |gets a list of all possible genes for auto-complete           |
 |GET         |/search?:id          |provides a list of variants associated with specified gene            |
-
-## Road Blocks and (some) Solutions
-
-1.  Originally thought to seed a database with tsv data but instead used Pandas.
-2. Pandas Dataframe data not being converted to JSON so converted data into more compatible format. In the end, however, this was still my downfall as React was still not able to read the data as props accurately. I believe that when the data was on the frontend, it was still somehow a DataFrame object making me unable to use the data. 
-
-## Take Aways
-
-1.  I have never worked with a .tsv file. That was interesting.
-2. I am going to research more about Pandas Dataframe.
-3. It was really interesting to have a Python backend with a React frontend. Being able to go between both languages was kind of fun.
-4. Even though I didn't hit MVP, I learned a lot on this project and I still plan to work on it until it is complete.
+|
 
 
 ## Technologies Used
 
 1.  React.JS
-4. Django
-5. Python
-6. Pandas
-7. .tsv
-8. Git
-9. GitHub
-10. PyCharm
-11. Sublime
+2. Python
+3. Django
+4. Git
+5. GitHub
+6. PyCharm
+7. Sublime

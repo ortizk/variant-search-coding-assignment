@@ -10,67 +10,6 @@ class Results extends Component {
   	}
   
   	render() {
-	    const data = [{
-	      gene: 'Roy Agasthyan',
-	      nucleoChange: 26,
-	      protienChange: 'asdf',
-	      alias: 'asdf',
-	      region: 'asdkf',
-	      repClass: 'aslkdf',
-	      lastEval: 'sldkf',
-	      lastUpdated: 'lskdjf',
-	      url: 'http://www.karlaortiz.xyz/'
-	    },{
-	      gene: 'Roy Agasthyan',
-	      nucleoChange: 26,
-	      protienChange: 'asdf',
-	      alias: 'asdf',
-	      region: 'asdkf',
-	      repClass: 'aslkdf',
-	      lastEval: 'sldkf',
-	      lastUpdated: 'lskdjf',
-	      url: 'this is a url'
-	    },{
-	      gene: 'Roy Agasthyan',
-	      nucleoChange: 26,
-	      protienChange: 'asdf',
-	      alias: 'asdf',
-	      region: 'asdkf',
-	      repClass: 'aslkdf',
-	      lastEval: 'sldkf',
-	      lastUpdated: 'lskdjf',
-	      url: 'this is a url'
-	    },{
-	      gene: 'Roy Agasthyan',
-	      nucleoChange: 26,
-	      protienChange: 'asdf',
-	      alias: 'asdf',
-	      region: 'asdkf',
-	      repClass: 'aslkdf',
-	      lastEval: 'sldkf',
-	      lastUpdated: 'lskdjf',
-	      url: 'this is a url'
-	    },{
-	      gene: 'Roy Agasthyan',
-	      nucleoChange: 26,
-	      protienChange: 'asdf',
-	      alias: 'asdf',
-	      region: 'asdkf',
-	      repClass: 'aslkdf',
-	      lastEval: 'sldkf',
-	      lastUpdated: 'lskdjf',
-	      url: 'this is a url'
-	    },{
-	      gene: 'Roy Agasthyan',
-	      nucleoChange: 26,
-	      protienChange: 'asdf',
-	      alias: 'asdf',
-	      region: 'asdkf',
-	      repClass: 'aslkdf',
-	      lastEval: 'sldkf',
-	      lastUpdated: 'lskdjf',
-	      url: 'this is a urlssssdddjdjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfj'
-	    }]
 
 	    const columns = [{
 	      Header: 'Gene',
@@ -111,7 +50,7 @@ class Results extends Component {
 						data={this.props.variantsList}
 						columns={columns}
 						defaultPageSize = {3}
-						pageSizeOptions = {[5, 10, 50, 100]}
+						pageSizeOptions = {[3, 5, 10, 50, 100]}
 						/>
 					</div>
 				</div>      
