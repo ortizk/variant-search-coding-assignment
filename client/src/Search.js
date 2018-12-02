@@ -37,7 +37,7 @@ class Search extends Component {
 	}
 
 	render() {
-		console.log(typeof this.state.variants)
+		console.log(this.state.variants)
 		const genes = this.props.geneList || []
 		return(
 			<div>
