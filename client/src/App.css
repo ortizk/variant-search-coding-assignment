@@ -2,35 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 body {
   background: url('https://images.pexels.com/photos/572688/pexels-photo-572688.jpeg?cs=srgb&dl=conifer-daylight-environment-572688.jpg&fm=jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -86,42 +57,27 @@ form {
   border: 1px solid #cccccc;
 }
 
+.ReactTable .rt-th, .ReactTable .rt-td:hover {
+  overflow: visible;
+}
 .table {
   background: rgba(225, 225, 225, .8);
-  border-radius: 15px;
+  width: 90%;
+  margin: auto;
   color: black;
-  font-weight: 280;
+  margin-top: 50px;
+
 }
 
 .title {
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: white;
+  text-shadow: 1px 1px grey;
   font-weight: 400;
   margin-top: 180px;
   font-size: 60px;
 }
 
-
-/*-----------------*/
-
-/*.auto textarea {
-  height: 400px;
-}*/
-
-/*not working*/
-/*input textarea {
-  height: 400px;
-  width: 60%;
-  border: 1px solid white;
-  background-color: transparent;
-}*/
-
-/*.geneInput {
-  height: 100px;
-  width: 60%;
-  border: 1px solid white;
-  background-color: transparent;
-}*/
 
 
 

@@ -1,14 +1,13 @@
-from django.shortcuts import get_object_or_404, render, redirect
-from django.template import Context, RequestContext
-from django.http import HttpResponse, HttpResponseRedirect,JsonResponse
-from .api_logic import load_find
+from django.http import JsonResponse
+from .api_logic import find_variants, pandas_variant
 import json
 
-
+# FOR AUTO COMPLETE CALLED ON PAGE LOAD
 def geneList(request):
-	genes = load_find.getList()
+	genes = pandas_variant.genes_list()
 	return JsonResponse({"genes":json.dumps(genes)})
 
+# GET VARIANTS ASSOCIATED WITH GENE
 def searchGene(request):
-	variants = load_find.searchGene(request.GET.get("gene"))
+	variants = find_variants.find_variants_by_gene(request.GET.get("gene"))
 	return JsonResponse({"variants":json.dumps(variants)})

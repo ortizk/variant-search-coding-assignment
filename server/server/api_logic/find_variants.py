@@ -1,12 +1,19 @@
-def find_gene(gene, data):
-	variants = []
-	for v in data._get_values.tolist():
+# FINDS VARIANTS ASSOCIATED WITH GENE
+import csv
+import os
+
+def find_variants_by_gene(gene):
+	cwd = os.getcwd()
+	with open(f'{cwd}/server/api_logic/variants.tsv', 'r', encoding=None) as tsvin:
+		tsvin = csv.reader(tsvin, delimiter='\t')
+		variants = []
 		current = []
-		# v = v.tolist()
-		if v[0] == gene:
-			current.extend((v[0], str(v[1]), str(v[2]), str(v[4]), str(v[6]), v[7], str(v[10]), v[11], v[12] ))
-			variants.append(current)
-			current = []
-			print(variants)
-	return variants
+		for row in tsvin:
+			if row[0] == gene:
+				current.extend((row[0], row[1], row[2], row[4], row[6], row[7], row[10], row[11], row[12] ))
+				variants.append(current)
+				current = []
+		return variants
+
+
 

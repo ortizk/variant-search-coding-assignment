@@ -47,7 +47,7 @@ You can rename the current file by clicking the file name in the navigation bar 
 |----------------|-------------------------------|-----------------------------|
 |GET|/genes	            |gets a list of all possible genes for auto-complete           |
 |GET         |/search?:id          |provides a list of variants associated with specified gene            |
-|
+
 ## Road Blocks and (some) Solutions
 
 1.  Originally thought to seed a database with tsv data but instead used Pandas.

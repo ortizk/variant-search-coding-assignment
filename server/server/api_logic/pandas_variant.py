@@ -1,14 +1,18 @@
-import pandas as pd 
+#GETTING GENES LIST FOR AUTO COMPLETE
 
-def read_data():
-	data = pd.read_csv("/Users/karla/afterClass/variant-search-coding-assignment/server/server/api_logic/variants.tsv", sep='\t')
-	print(data.head())
-	genes = []
-	for g in data.Gene.values:
-		if str(g) != "nan":
-			genes.append(g)
-	genes = list(set(genes))
-	return data, genes
+import csv
+import os
 
+
+def genes_list():
+	cwd = os.getcwd()
+	with open(f'{cwd}/server/api_logic/variants.tsv', 'r', encoding=None) as tsvin:
+		tsvin = csv.reader(tsvin, delimiter='\t')
+		genes = []
+		for row in tsvin:
+			if row[0] != "":
+				genes.append(row[0])
+		genes = list(set(genes))
+	return genes
 
 
