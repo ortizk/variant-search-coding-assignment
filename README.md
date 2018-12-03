@@ -23,7 +23,7 @@ Create a web application that allows a user to search for genomic variants by ge
     
 2.  Install dependencies client: `npm install`
 
-3. Install dependencies server: `pip3 install -r requirements.txt`
+3. Install dependencies server: `pip3 install -e`
     
 4.  Navigate to client `npm start` then navigate to server `python3 manage.py runserver`
 
