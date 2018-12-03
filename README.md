@@ -27,7 +27,7 @@ cd client
 npm install
 ```
 
-3. Install dependencies server: `pip3 install -r requeriments.txt`
+3. Install dependencies server: `pip3 install -r requirements.txt`
     
 4.  Navigate to client `npm start` then navigate to server `python3 manage.py runserver`
 

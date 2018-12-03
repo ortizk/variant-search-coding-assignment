@@ -26,7 +26,7 @@ SECRET_KEY = '#*(%fi+&ep0a@dr*dryarq!)*9cq&8$4r#$+a*2!aague-^_(9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://mysterious-dawn-16650.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 
