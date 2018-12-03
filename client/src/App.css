@@ -41,6 +41,11 @@ form {
   /*margin-top: 200px;*/
 }
 
+h2 {
+  text-shadow: 1px 1px grey;
+}
+
+
 .item {
   padding: 2px 6px;
   cursor: default;
@@ -66,6 +71,7 @@ form {
   margin: auto;
   color: black;
   margin-top: 50px;
+  margin-bottom: 50px;
 
 }
 
