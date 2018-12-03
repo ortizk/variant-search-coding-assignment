@@ -24,19 +24,20 @@ Create a web application that allows a user to search for genomic variants by ge
 2.  Install dependencies and run client - Navigate to Client
 ```
 npm install
-python3 manage.py runserver
+npm start
 ```
 
 3. Install dependencies server and run - Navigate to Server: 
 ```
-pip3 install -r requirements.txt
-npm start
+pip3 install -r requirements.
+cd server
+python3 manage.py runserver
 ```
 
 
 ## Testing
 
-To test API endpoints navigate to server `py.test test.tavern.yaml`
+To test API endpoints navigate to server containing test.tavern.yaml `py.test test.tavern.yaml`
 
 ## Development Process
 
