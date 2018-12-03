@@ -12,26 +12,37 @@ Create a web application that allows a user to search for genomic variants by ge
     
 3.  Provides two RESTful endpoints supporting the functionality listed in no. 1 and 2.
 
+
+## Wireframe
+![screen shot 2018-12-02 at 1 22 43 pm](https://user-images.githubusercontent.com/34222706/49347356-84c42b80-f652-11e8-884a-ee60f57aea6d.png)
+
+
 ## Installing and Running
 
 1.  Clone this repository `git clone git@github.com:ortizk/variant-search-coding-assignment.git`
     
-2.  Install dependencies `npm install`
-    
-3.  cd client `npm start` then cd into (2nd)server `python3 manage.py runserver`
+2.  Install dependencies client: `npm install`
 
+3. Install dependencies server: `pip3 install -r requirements.txt`
+    
+4.  Navigate to client `npm start` then navigate to server `python3 manage.py runserver`
+
+## Testing
+
+To test API endpoints navigate to server `py.test test.tavern.yaml`
 
 ## Development Process
 
 1. Planned, scheduled and researched
 2. Created basic api logic 
-3. Used Pandas to access data in tsv file
+3. Accessed data in tsv file
 4. Set up backend and frontend environments
 5. Integrated api logic
 6. Set up routes
-7. Created components on the frontend and set up Axios requests
-8. Connected frontend and backend
-9. Styled app
+7. Tested routes with Postman
+8. Created components on the frontend and set up Axios requests
+9. Connected frontend and backend
+10. Styled app
 
 
 ## Routes
@@ -48,7 +59,8 @@ Create a web application that allows a user to search for genomic variants by ge
 1.  React.JS
 2. Python
 3. Django
-4. Git
-5. GitHub
-6. PyCharm
-7. Sublime
+4. Postman
+5. Git
+6. GitHub
+7. Pytest
+8. Tavern
