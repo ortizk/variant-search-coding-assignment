@@ -21,7 +21,11 @@ Create a web application that allows a user to search for genomic variants by ge
 
 1.  Clone this repository `git clone git@github.com:ortizk/variant-search-coding-assignment.git`
     
-2.  Install dependencies client: `npm install`
+2.  Install dependencies client:
+```
+cd client
+npm install
+```
 
 3. Install dependencies server: `pip3 install -r requeriments.txt`
     
